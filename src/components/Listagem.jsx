@@ -1,4 +1,4 @@
-function Listagem({item, concluirTarefa, removerTarefa}){
+function Listagem({item, atualizarStatus, removerAnimal}){
     return(
         <>
         
@@ -12,8 +12,8 @@ function Listagem({item, concluirTarefa, removerTarefa}){
                 </span>
 
                 <div>
-                    <button className={item.isEncontrado == true ? "bt_pendente btns": "bt_concluir btns"} onClick={() => concluirTarefa(item.id)}>{item.isEncontrado == true ? <i class="bi bi-x-lg black"></i>:<i class="bi bi-check-lg black"></i>}</button>
-                    <button className="bt_remover btns" onClick={() => removerTarefa(item.id)}><i class="bi bi-trash3-fill"></i></button>
+                    <button className={item.isEncontrado == true ? "bt_pendente btns": "bt_concluir btns"} onClick={() => atualizarStatus(item.id)}>{item.isEncontrado == true ? <i class="bi bi-x-lg black"></i>:<i class="bi bi-check-lg black"></i>}</button>
+                    <button className="bt_remover btns" onClick={() => removerAnimal(item.id)}><i class="bi bi-trash3-fill"></i></button>
                 </div>
           </li>  
 

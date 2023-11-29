@@ -4,7 +4,7 @@
 }
 
 body{
-  background: url('./images/animais.jpg');
+  background: url('https://img.elo7.com.br/product/zoom/2A66A2F/papel-de-parede-pets-cachorro-cachorrinhos-autocolante-papel-de-parede-vintage.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -13,13 +13,14 @@ body{
 }
 
 .app{
-  background-color: rgba(128, 128, 128, 0.516);
+  background-color: rgba(97, 97, 97, 0.533);
   width: 960px;
   margin: 0 auto;
   margin-top: 40px;
   text-align: center;
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
   padding: 5px;
+  border: 1px solid black;
 }
 
 #listaAnimais{
@@ -39,11 +40,13 @@ span{
   padding: 15px;
   border-radius: 10px;
   display: inline-block;
+  box-shadow: 1px 1px 2px #fff;
 }
 
 .animal > img{
-  width: 50%;
-  height: 50%;
+  width: 90px;
+  height: 90px;
+  background-size: 100% 100%;
   border: 1px solid black;
   float: right;
   margin-left: 20px;
@@ -51,6 +54,7 @@ span{
 h4{
   margin-top: 10px;
 }
+
 
 .btns{
   padding: 8px;
@@ -89,14 +93,19 @@ i.black{
   color: black;
 }
 
-.cadastrar input{
-  width: 100%;
-  height: 28px;
+.cadastrar input.texts{
+  width: 230px;
+  margin-left: 10px;
+  height: 20px;
   border-radius: 8px;
   border: 1px solid #e2e2e2;
   padding: 4px;
 }
 
+input.radios{
+  margin-left: 7px;
+  margin-top: 10px;
+}
 
 button:active {
   transform: translateY(-3px);
