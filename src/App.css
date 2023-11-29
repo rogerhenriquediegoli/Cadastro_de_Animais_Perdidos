@@ -4,16 +4,14 @@
 }
 
 body{
-  background: url('https://img.elo7.com.br/product/zoom/2A66A2F/papel-de-parede-pets-cachorro-cachorrinhos-autocolante-papel-de-parede-vintage.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background: url('https://img.elo7.com.br/product/zoom/2CF460B/papel-de-parede-adesivo-pets-dogs-e-cats-fundo-verde-papel-de-parede-adesivo.jpg');
   background-attachment: fixed;
   /*background: linear-gradient(45deg, rgb(163, 163, 163), rgb(186, 186, 186), rgb(167, 167, 167));*/
   height: 100vh;
 }
 
 .app{
-  background-color: rgba(97, 97, 97, 0.533);
+  background-color: rgba(97, 97, 97, 0.682);
   width: 960px;
   margin: 0 auto;
   margin-top: 40px;
@@ -147,19 +145,17 @@ button:active {
   margin: 5px;
  
 }
- 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+
+footer{
+  text-align: center;
+  padding: 10px;
 }
- 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+
+a{
+  text-decoration: none;
+  font-style: italic;
+}
+
+a:hover{
+  text-decoration: underline;
 }

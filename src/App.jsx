@@ -4,7 +4,7 @@ import Cadastro from './components/Cadastro'
 import Listagem from './components/Listagem'
 
 function App() {
-  const [listaTarefa, setListaTarefa] = useState([
+  const [listaAnimais, setListaAnimais] = useState([
     {"id": 1, "nomeAnimal": "Frederico", "imgAnimal": "https://petanjo.com/blog/wp-content/uploads/2021/11/labrador-tudo-sobre-a-raca-768x576.jpg", "racaAnimal": "Labrador", "localAnimal": "Perto do rio da Prata", "isEncontrado": false},
   {"id": 2, "nomeAnimal": "Bella", "imgAnimal": "https://image.cachorrogato.com.br/thumb/315/245/1/imagens/racas/imagem142.jpg", "racaAnimal": "Golden Retriever", "localAnimal": "No parque central", "isEncontrado": true},
   {"id": 3, "nomeAnimal": "Max", "imgAnimal": "https://www.zooplus.pt/magazine/wp-content/uploads/2020/11/pastor-alemao-1024x681.jpg", "racaAnimal": "Pastor Alemão", "localAnimal": "Na rua principal", "isEncontrado": false},
@@ -15,31 +15,32 @@ function App() {
   {"id": 8, "nomeAnimal": "Rocky", "imgAnimal": "https://www.petz.com.br/blog/wp-content/uploads/2023/06/bulldog-frances-e-docil.jpg", "racaAnimal": "Bulldog Francês", "localAnimal": "No centro da cidade", "isEncontrado": true}
   ])
   
-  const addAnimal = (nome, url, raca, encontrado, local)=>{
-    const newListaTarefa = [...listaTarefa, {
-      id: Math.floor(Math.random() * 100000), 
-      nomeAnimal: nome,
-      imgAnimal: url,
-      racaAnimal: raca, 
-      localAnimal: local,
-      isEncontrado: encontrado
-    }]
-    setListaTarefa(newListaTarefa)
-  }
+  const addAnimal = (nome, url, raca, encontrado, local) => {
+    const newListaAnimais = [
+      ...listaAnimais,
+      {
+        id: Math.floor(Math.random() * 100000),
+        nomeAnimal: nome,
+        imgAnimal: url,
+        racaAnimal: raca,
+        localAnimal: local,
+        isEncontrado: encontrado,
+      },
+    ];
+    setListaAnimais(newListaAnimais);
+  };
+  
 
-  const atualizarStatus = (id) =>{
-    const newListaTarefa = [...listaTarefa]
-    newListaTarefa.map((item) =>{
-      if(item.id === id){
-        item.isEncontrado = !item.isEncontrado;
-      }
-    })
-    setListaTarefa(newListaTarefa)
-  }
+  const atualizarStatus = (id) => {
+    const newListaAnimais = listaAnimais.map((item) =>
+      item.id === id ? { ...item, isEncontrado: !item.isEncontrado } : item
+    );
+    setListaAnimais(newListaAnimais);
+  };  
 
   const removerAnimal = (id) =>{
-    const newListaTarefa = [...listaTarefa].filter(item => item.id !== id)
-    setListaTarefa(newListaTarefa)
+    const newListaAnimais = [...listaAnimais].filter(item => item.id !== id)
+    setListaAnimais(newListaAnimais)
   }
 
   return (
@@ -48,7 +49,7 @@ function App() {
       <h1>Cadastro de Animais Perdidos/Encontrados</h1>
         <Cadastro addAnimal={addAnimal}/>
         {
-          listaTarefa
+          listaAnimais
           .map((item) => (
             <Listagem item={item} atualizarStatus={atualizarStatus} removerAnimal={removerAnimal}/>
           ))

@@ -23,7 +23,7 @@ function Cadastro({ addAnimal }) {
   return (
     <>
       <div className="cadastrar">
-        <input className="texts"type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Informe o nome do Animal" />
+        <input className="texts" type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Informe o nome do Animal" />
         <input className="texts" type="text" value={raca} onChange={(e) => setRaca(e.target.value)} placeholder="Informe a raça do Animal..." />
         <input className="texts" type="text" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="Insira a imagem do Animal..." />
         <input className="texts" type="text" value={local} onChange={(e) => setLocal(e.target.value)} placeholder="Informe a localização..." />
@@ -33,9 +33,7 @@ function Cadastro({ addAnimal }) {
           <label htmlFor="per">Perdido</label>
           <input className="radios" id="per" type="radio" value={false} name="isEncontrado" checked={!encontrado} onChange={handleRadioChange}/>
         </div>
-        <button className="bt_cadastrar btns" onClick={cadastrar}>
-          Cadastrar
-        </button>
+        <button className="bt_cadastrar btns" onClick={cadastrar}>Cadastrar</button>
       </div>
       
     </>
