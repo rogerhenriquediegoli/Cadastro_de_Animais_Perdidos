@@ -37,4 +37,3 @@ Dessa vez, você tem o desafio de realizar o cadastro para animais perdidos e aj
 - Crie os arquivos de personalização necessários de CSS e JSX;
 - Crie um repositório no GitHub;
 - A entrega da tarefa deverá ser realizada pelo link do GitHub de cada aluno.
-
